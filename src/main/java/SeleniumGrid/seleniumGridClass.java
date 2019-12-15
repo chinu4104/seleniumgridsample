@@ -23,8 +23,8 @@ public class seleniumGridClass {
         ChromeOptions chromeopt = new ChromeOptions();
         chromeopt.merge(descap);
 
-
-        String hubUrl = "http://localhost:4444/wd/hub/";
+        // change the url based on the selenium chrome service name
+        String hubUrl = "http://seleniumstandalonechrome:4444/wd/hub/";
         WebDriver driver = new RemoteWebDriver(new URL(hubUrl),chromeopt);
         driver.get("https://www.google.com");
         System.out.println(driver.getTitle());
